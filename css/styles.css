@@ -81,6 +81,13 @@ li {
   margin-bottom: 8px;
 }
 
+#experiencia ul {
+  margin-top: 12px;
+}
+
+#experiencia li {
+  line-height: 1.5;
+}
 /* Contacto */
 #contacto p {
   font-weight: 500;
