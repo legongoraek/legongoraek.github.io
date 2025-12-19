@@ -24,6 +24,24 @@ body {
   padding: 40px 20px;
 }
 
+.navbar {
+  max-width: 900px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
 .header {
   text-align: center;
 }
