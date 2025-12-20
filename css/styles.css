@@ -214,3 +214,22 @@ body.dark {
     transform: none;
   }
 }
+.impact {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.impact strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.impact ul {
+  padding-left: 18px;
+}
+
+.impact li {
+  font-size: 0.95rem;
+}
