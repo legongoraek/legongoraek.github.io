@@ -213,6 +213,64 @@ body.dark {
     opacity: 1;
     transform: none;
   }
+  body {
+    padding: 16px 12px;
+  }
+
+  header,
+  section {
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Navbar más usable */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navbar a {
+    font-size: 0.95rem;
+  }
+
+  /* Cards */
+  .experience-card {
+    padding: 20px;
+  }
+
+  .experience-card h3 {
+    font-size: 1rem;
+  }
+
+  .experience-meta {
+    font-size: 0.8rem;
+  }
+
+  .experience-card li {
+    font-size: 0.95rem;
+  }
+
+  /* Impacto más claro */
+  .impact strong {
+    font-size: 0.95rem;
+  }
+
+  .impact li {
+    font-size: 0.9rem;
+  }
 }
 .impact {
   margin-top: 16px;
