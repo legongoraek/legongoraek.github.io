@@ -173,3 +173,26 @@ li {
   margin-bottom: 8px;
   line-height: 1.5;
 }
+
+/* Dark mode */
+body.dark {
+  --bg-main: #0f172a;
+  --bg-card: #020617;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --border: #1e293b;
+  --primary: #38bdf8;
+}
+
+/* Botón toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+#theme-toggle:hover {
+  color: var(--primary);
+}
