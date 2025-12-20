@@ -29,3 +29,8 @@ const observer = new IntersectionObserver(
     threshold: 0
   }
 );
+window.addEventListener("load", () => {
+  document.querySelectorAll(".fade-in").forEach(el => {
+    el.classList.add("visible");
+  });
+});
