@@ -15,16 +15,17 @@ toggle.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // solo anima una vez
       }
     });
   },
-  { threshold: 0.1 }
+  {
+    root: null,
+    rootMargin: "0px 0px -50px 0px",
+    threshold: 0
+  }
 );
-
-document.querySelectorAll(".fade-in").forEach(el => {
-  observer.observe(el);
-});
