@@ -56,4 +56,11 @@ if (!savedLang) {
     window.location.href = "index.html";
   }
 }
+// Track idioma activo
+const currentLang = window.location.pathname.includes("en.html") ? "en" : "es";
 
+if (typeof gtag === "function") {
+  gtag("event", "language_view", {
+    language: currentLang
+  });
+}
