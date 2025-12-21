@@ -291,3 +291,25 @@ body.dark {
 .impact li {
   font-size: 0.95rem;
 }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+}
+
+.contact-list a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list a:hover {
+  color: var(--primary);
+}
