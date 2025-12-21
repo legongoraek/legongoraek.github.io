@@ -34,3 +34,26 @@ window.addEventListener("load", () => {
     el.classList.add("visible");
   });
 });
+
+/* =====================
+   LANGUAGE DETECTION
+===================== */
+
+const userLang = navigator.language || navigator.userLanguage;
+const savedLang = localStorage.getItem("lang");
+const isEnglish = userLang.startsWith("en");
+const currentPage = window.location.pathname;
+
+// Si NO hay idioma guardado
+if (!savedLang) {
+  if (isEnglish && !currentPage.includes("en.html")) {
+    localStorage.setItem("lang", "en");
+    window.location.href = "en.html";
+  }
+
+  if (!isEnglish && currentPage.includes("en.html")) {
+    localStorage.setItem("lang", "es");
+    window.location.href = "index.html";
+  }
+}
+
