@@ -313,3 +313,16 @@ body.dark {
 .contact-list a:hover {
   color: var(--primary);
 }
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 24px;
+}
