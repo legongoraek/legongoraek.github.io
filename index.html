@@ -9,6 +9,7 @@
 <link rel="alternate" hreflang="en" href="https://legongoraek.github.io/en.html" />
 <link rel="alternate" hreflang="x-default" href="https://legongoraek.github.io/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Full Stack Developer, Django, React, React Native, Vue.js, APIs, Automatización, México">
   <link rel="stylesheet" href="css/styles.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7V1V88QR9"></script>
@@ -27,19 +28,18 @@
 <meta property="og:image" content="https://legongoraek.github.io/assets/img/IMG_9656.PNG">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation">
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#stack">Stack</a>
     <a href="#experiencia">Experiencia</a>
     <a href="#contacto">Contacto</a>
     <a href="en.html" onclick="localStorage.setItem('lang','en')">EN</a>
-    <button id="theme-toggle">🌙</button>
+    <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
   </nav>
-  <!-- Header -->
   <header class="header fade-in">
-    <img src="assets/img/IMG_9656.PNG" alt="Luis Enrique Góngora Ek" class="profile-img">
+    <img src="assets/img/IMG_9656.PNG" alt="Luis Enrique Góngora Ek, Full Stack Developer" class="profile-img" loading="lazy">
     <h1>Luis Enrique Góngora Ek</h1>
-    <p>Full Stack Developer | Web, Mobile y Automatización</p>
+    <p class="subtitle">Full Stack Developer | Web, Mobile y Automatización</p>
   </header>
 
   <section id="sobre-mi">
@@ -71,7 +71,10 @@
 <div class="experience-cards">
   <div class="experience-card fade-in">
     <h3>Desarrollador Full Stack</h3>
-    <span class="experience-meta">Erbessd Instruments · Octubre 2022 – Enero 2026</span>
+    <span class="experience-meta">Erbessd Instruments · 
+      <time datetime="2022-10">Octubre 2022</time> – 
+      <time datetime="2026-01">Enero 2026</time>
+    </span>
     <ul>
       <li>Diseño y desarrollo de endpoints backend para comunicación eficiente frontend–backend.</li>
       <li>Desarrollo de interfaces con Vue.js, Electron, HTML y CSS.</li>
@@ -144,7 +147,7 @@
     </li>
 
     <li>
-      <a href="https://wa.me/549994231687" target="_blank" rel="noopener">
+      <a href="https://wa.me/529994231687" target="_blank" rel="noopener">
         💬 WhatsApp: +52 999 423 1687
       </a>
     </li>
