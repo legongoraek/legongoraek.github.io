@@ -239,7 +239,7 @@ body.dark {
   /* Navbar más usable */
   .navbar {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px !important;
   }
 
   .navbar a {
@@ -322,7 +322,8 @@ body.dark {
 }
 
 .project-card {
-  background: var(--card-bg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 24px;
 }
