@@ -327,3 +327,95 @@ body.dark {
   border-radius: 16px;
   padding: 24px;
 }
+
+/* Banner nuevo sitio */
+.new-site-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  animation: bannerSlideDown 0.35s ease;
+}
+
+.new-site-banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.new-site-banner-link {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.new-site-banner-link:hover {
+  opacity: 0.9;
+}
+
+.new-site-banner-close {
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-site-banner-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.new-site-banner.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+body.has-new-site-banner {
+  padding-top: 88px;
+}
+
+@keyframes bannerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .new-site-banner-content {
+    gap: 8px;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  body.has-new-site-banner {
+    padding-top: 96px;
+  }
+}

@@ -66,3 +66,31 @@ if (typeof gtag === "function") {
     language: currentLang
   });
 }
+
+/* =====================
+   NEW SITE BANNER
+===================== */
+
+const newSiteBanner = document.getElementById("new-site-banner");
+const closeNewSiteBanner = document.getElementById("close-new-site-banner");
+
+function hideNewSiteBanner() {
+  if (!newSiteBanner) return;
+
+  newSiteBanner.classList.add("hide");
+  document.body.classList.remove("has-new-site-banner");
+
+  setTimeout(() => {
+    newSiteBanner.remove();
+  }, 300);
+}
+
+if (newSiteBanner) {
+  document.body.classList.add("has-new-site-banner");
+
+  if (closeNewSiteBanner) {
+    closeNewSiteBanner.addEventListener("click", hideNewSiteBanner);
+  }
+
+  setTimeout(hideNewSiteBanner, 8000);
+}
