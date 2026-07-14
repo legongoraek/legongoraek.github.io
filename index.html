@@ -87,7 +87,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </button>
     </div>
   </div>
-  <nav class="navbar" role="navigation">
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="main-navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="navbar" id="main-navigation" role="navigation" aria-label="Navegación principal">
+    <div class="navbar-heading">
+      <span>Menú</span>
+      <button class="menu-close" id="menu-close" type="button" aria-label="Cerrar menú">×</button>
+    </div>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#stack">Stack</a>
     <a href="#projects">Proyectos</a>
@@ -96,6 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="en.html" onclick="localStorage.setItem('lang','en')">EN</a>
     <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
   </nav>
+  <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
   <header class="header fade-in">
     <img src="assets/img/IMG_9656.PNG" alt="Luis Enrique Góngora Ek, Full Stack Developer" class="profile-img" loading="lazy">
     <h1>Luis Enrique Góngora Ek</h1>

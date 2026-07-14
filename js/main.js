@@ -1,6 +1,36 @@
 const toggle = document.getElementById("theme-toggle");
 const body = document.body;
 
+/* =====================
+   MOBILE MENU
+===================== */
+
+const menuToggle = document.getElementById("menu-toggle");
+const menuClose = document.getElementById("menu-close");
+const menuBackdrop = document.getElementById("menu-backdrop");
+const mainNavigation = document.getElementById("main-navigation");
+
+function setMenuState(isOpen) {
+  body.classList.toggle("menu-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+}
+
+menuToggle?.addEventListener("click", () => setMenuState(true));
+menuClose?.addEventListener("click", () => setMenuState(false));
+menuBackdrop?.addEventListener("click", () => setMenuState(false));
+
+mainNavigation?.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => setMenuState(false));
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") setMenuState(false);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) setMenuState(false);
+});
+
 // Cargar preferencia guardada
 if (toggle && localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");

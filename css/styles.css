@@ -46,6 +46,8 @@ body::before {
 a, button { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible { outline: 3px solid rgba(49,87,213,.35); outline-offset: 4px; }
 
+.menu-toggle, .menu-close, .navbar-heading, .menu-backdrop { display: none; }
+
 .navbar {
   position: sticky;
   top: 18px;
@@ -209,22 +211,112 @@ body.has-new-site-banner { padding-top: 88px; }
 @media (max-width: 760px) {
   body { padding: 18px 12px 45px; }
   body.has-new-site-banner { padding-top: 110px; }
-  .navbar {
+  body.menu-open { overflow: hidden; }
+  .menu-toggle {
+    position: sticky;
     top: 10px;
-    margin-bottom: 18px;
-    padding: 9px;
-    flex-wrap: wrap;
+    z-index: 120;
+    width: 46px;
+    height: 46px;
+    margin: 0 0 18px auto;
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    overflow: visible;
-    border-radius: 16px;
+    gap: 5px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--bg-elevated) 88%, transparent);
+    box-shadow: 0 10px 28px rgba(31,50,95,.14);
+    backdrop-filter: blur(18px);
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background: var(--text-main);
+    transition: transform .25s ease, opacity .2s ease;
+  }
+  .navbar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 140;
+    width: min(82vw, 320px);
+    max-width: none;
+    margin: 0;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-y: auto;
+    border-width: 0 1px 0 0;
+    border-radius: 0 22px 22px 0;
+    background: var(--bg-elevated);
+    box-shadow: 22px 0 60px rgba(8,17,32,.22);
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition: transform .3s ease, visibility .3s;
+  }
+  body.menu-open .navbar { transform: translateX(0); visibility: visible; }
+  .navbar-heading {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    font-family: "Space Grotesk", "Manrope", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .menu-close {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 11px;
+    color: var(--text-main);
+    background: rgba(49,87,213,.09);
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
   }
   .navbar a {
-    flex: 0 1 auto;
-    padding: 7px 9px;
-    font-size: .76rem;
-    text-align: center;
+    width: 100%;
+    padding: 12px 14px;
+    flex: 0 0 auto;
+    border-radius: 11px;
+    font-size: .92rem;
+    text-align: left;
   }
-  #theme-toggle { flex: 0 0 36px; }
+  #theme-toggle {
+    width: 100%;
+    height: 44px;
+    margin-top: 8px;
+    flex: 0 0 44px;
+    border-radius: 11px;
+    transform: none;
+  }
+  #theme-toggle:hover,
+  #theme-toggle:active {
+    transform: none;
+  }
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 130;
+    display: block;
+    background: rgba(5,12,25,.55);
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(3px);
+    transition: opacity .3s ease, visibility .3s;
+  }
+  body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
   .header { min-height: 430px; padding: 52px 20px; border-radius: 22px; }
   .profile-img { width: 126px; height: 126px; }
   header h1 { font-size: clamp(2.25rem, 13vw, 3.25rem); }
@@ -237,9 +329,7 @@ body.has-new-site-banner { padding-top: 88px; }
 }
 
 @media (max-width: 390px) {
-  .navbar { gap: 4px; }
-  .navbar a { padding: 6px 7px; font-size: .71rem; }
-  #theme-toggle { width: 34px; height: 34px; flex-basis: 34px; }
+  .navbar { width: 86vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
