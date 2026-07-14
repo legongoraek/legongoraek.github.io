@@ -209,9 +209,21 @@ body.has-new-site-banner { padding-top: 88px; }
 @media (max-width: 760px) {
   body { padding: 18px 12px 45px; }
   body.has-new-site-banner { padding-top: 110px; }
-  .navbar { top: 10px; margin-bottom: 18px; justify-content: flex-start; overflow-x: auto; border-radius: 16px; scrollbar-width: none; }
-  .navbar::-webkit-scrollbar { display: none; }
-  .navbar a { flex: 0 0 auto; padding: 7px 10px; font-size: .78rem; }
+  .navbar {
+    top: 10px;
+    margin-bottom: 18px;
+    padding: 9px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    border-radius: 16px;
+  }
+  .navbar a {
+    flex: 0 1 auto;
+    padding: 7px 9px;
+    font-size: .76rem;
+    text-align: center;
+  }
   #theme-toggle { flex: 0 0 36px; }
   .header { min-height: 430px; padding: 52px 20px; border-radius: 22px; }
   .profile-img { width: 126px; height: 126px; }
@@ -222,6 +234,12 @@ body.has-new-site-banner { padding-top: 88px; }
   #stack ul, .project-cards, .contact-list { grid-template-columns: 1fr; }
   .project-card, .experience-card { padding: 22px; }
   .new-site-banner-content { gap: 7px; flex-wrap: wrap; font-size: .8rem; }
+}
+
+@media (max-width: 390px) {
+  .navbar { gap: 4px; }
+  .navbar a { padding: 6px 7px; font-size: .71rem; }
+  #theme-toggle { width: 34px; height: 34px; flex-basis: 34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
