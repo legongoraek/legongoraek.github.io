@@ -332,6 +332,28 @@ body.has-new-site-banner { padding-top: 88px; }
   .navbar { width: 86vw; }
 }
 
+i.fas {
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-links i.fas {
+  margin-right: 6px;
+}
+
+.contact-list i.fas {
+  margin-right: 12px;
+  font-size: 1.2em;
+  min-width: 20px;
+  text-align: center;
+}
+
+#theme-toggle i.fas {
+  margin: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
