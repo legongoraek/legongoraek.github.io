@@ -332,25 +332,34 @@ body.has-new-site-banner { padding-top: 88px; }
   .navbar { width: 86vw; }
 }
 
-i.fas {
+i.fas, i.fab {
   margin-right: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: auto;
 }
 
-.project-links i.fas {
+.project-links i.fas, .project-links i.fab {
   margin-right: 6px;
+  font-size: 0.95em;
 }
 
-.contact-list i.fas {
-  margin-right: 12px;
-  font-size: 1.2em;
-  min-width: 20px;
+.contact-list i.fas, .contact-list i.fab {
+  margin-right: 14px;
+  font-size: 1.15em;
+  min-width: 22px;
   text-align: center;
+  flex-shrink: 0;
 }
 
-#theme-toggle i.fas {
+#theme-toggle i.fas, #theme-toggle i.fab {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.menu-close i.fas, .menu-close i.fab,
+.new-site-banner-close i.fas, .new-site-banner-close i.fab {
   margin: 0;
 }
 

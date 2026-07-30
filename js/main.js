@@ -34,7 +34,7 @@ window.addEventListener("resize", () => {
 // Cargar preferencia guardada
 if (toggle && localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
-  toggle.textContent = "☀️";
+  toggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 if (toggle) {
@@ -42,7 +42,7 @@ if (toggle) {
     body.classList.toggle("dark");
 
     const isDark = body.classList.contains("dark");
-    toggle.textContent = isDark ? "☀️" : "🌙";
+    toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 }
