@@ -1,8 +1,9 @@
 (function () {
   'use strict';
 
-  // Endpoint compartido con el portafolio Astro (mismo backend Vercel).
-  var CHAT_API_URL = 'https://luisenriquegongoraek.com/api/chat';
+  // Servicio compartido: github.com/legongoraek/portfolio-assistant.
+  // Actualiza esta URL si el proyecto se despliega con otro dominio en Vercel.
+  var CHAT_API_URL = 'https://portfolio-assistant.vercel.app/api/chat';
 
   var texts = {
     es: {
