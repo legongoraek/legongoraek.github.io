@@ -42,7 +42,6 @@
   border-radius: 1.25rem;
   overflow: hidden;
   background: var(--bg-elevated);
-  backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-hover);
 }
