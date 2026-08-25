@@ -31,6 +31,10 @@
   height: 1.6rem;
 }
 
+#chatbot-panel[hidden] {
+  display: none;
+}
+
 #chatbot-panel {
   position: absolute;
   right: 0;

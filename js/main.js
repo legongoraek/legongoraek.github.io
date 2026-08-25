@@ -1,3 +1,29 @@
+// Revela el contenido de inmediato, antes que cualquier otra cosa en este
+// script. Si algo más abajo lanza una excepción (p. ej. localStorage
+// bloqueado por configuración de privacidad), el contenido ya es visible.
+document.querySelectorAll(".fade-in").forEach(el => {
+  el.classList.add("visible");
+});
+
+// localStorage puede lanzar (Safari con "Bloquear todas las cookies",
+// modo privado en navegadores viejos, almacenamiento deshabilitado, etc.).
+// Estos wrappers evitan que esos casos corten la ejecución del resto del script.
+function safeStorageGet(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function safeStorageSet(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    // Ignorar: preferencia de tema/idioma simplemente no persiste.
+  }
+}
+
 const toggle = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -32,7 +58,7 @@ window.addEventListener("resize", () => {
 });
 
 // Cargar preferencia guardada
-if (toggle && localStorage.getItem("theme") === "dark") {
+if (toggle && safeStorageGet("theme") === "dark") {
   body.classList.add("dark");
   toggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
@@ -43,7 +69,7 @@ if (toggle) {
 
     const isDark = body.classList.contains("dark");
     toggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    safeStorageSet("theme", isDark ? "dark" : "light");
   });
 }
 const observer = new IntersectionObserver(
@@ -61,28 +87,24 @@ const observer = new IntersectionObserver(
     threshold: 0
   }
 );
-document.querySelectorAll(".fade-in").forEach(el => {
-  el.classList.add("visible");
-});
-
 /* =====================
    LANGUAGE DETECTION
 ===================== */
 
 const userLang = navigator.language || navigator.userLanguage;
-const savedLang = localStorage.getItem("lang");
+const savedLang = safeStorageGet("lang");
 const isEnglish = userLang.startsWith("en");
 const currentPage = window.location.pathname;
 
 // Si NO hay idioma guardado
 if (!savedLang) {
   if (isEnglish && !currentPage.includes("en.html")) {
-    localStorage.setItem("lang", "en");
+    safeStorageSet("lang", "en");
     window.location.href = "en.html";
   }
 
   if (!isEnglish && currentPage.includes("en.html")) {
-    localStorage.setItem("lang", "es");
+    safeStorageSet("lang", "es");
     window.location.href = "index.html";
   }
 }
