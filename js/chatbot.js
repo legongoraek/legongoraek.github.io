@@ -3,7 +3,7 @@
 
   // Servicio compartido: github.com/legongoraek/portfolio-assistant.
   // Actualiza esta URL si el proyecto se despliega con otro dominio en Vercel.
-  var CHAT_API_URL = 'https://portfolio-assistant.vercel.app/api/chat';
+  var CHAT_API_URL = 'https://portfolio-assistant-six.vercel.app/api/chat';
 
   var texts = {
     es: {
