@@ -195,8 +195,13 @@ body.dark {
   --shadow-hover: 0 24px 60px rgba(0,0,0,.34);
 }
 
-.fade-in { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity: 1; transform: none; }
+/* Por defecto (sin JS, o mientras JS no haya corrido) el contenido es
+   visible: la animación de aparición es una mejora progresiva, nunca un
+   requisito para ver la página. Solo se oculta si <html> ya tiene la
+   clase "js" (agregada de forma síncrona en <head> apenas JS se ejecuta). */
+.fade-in { opacity: 1; transform: none; }
+.js .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.js .fade-in.visible { opacity: 1; transform: none; }
 
 .new-site-banner { position: fixed; inset: 0 0 auto; z-index: 9999; padding: 10px 16px; color: #fff; background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--accent)); box-shadow: 0 5px 20px rgba(0,0,0,.16); animation: bannerSlideDown .35s ease; }
 .new-site-banner-content { max-width: 1040px; margin: auto; display: flex; align-items: center; justify-content: center; gap: 14px; text-align: center; font-size: .9rem; font-weight: 700; }
