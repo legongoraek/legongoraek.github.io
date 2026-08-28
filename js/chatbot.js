@@ -72,6 +72,7 @@
   var history = [];
   var isOpen = false;
   var isSending = false;
+  var greetingShown = false;
 
   function setOpen(next) {
     isOpen = next;
@@ -81,8 +82,9 @@
     iconClose.style.display = isOpen ? '' : 'none';
     if (isOpen) {
       input.focus();
-      if (history.length === 0) {
+      if (!greetingShown) {
         appendMessage('assistant', t.greeting);
+        greetingShown = true;
       }
     }
   }
