@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow OpenAI's search crawler for ChatGPT Search discovery.
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://legongoraek.github.io/sitemap.xml
