@@ -1,0 +1,56 @@
+# Luis Enrique Góngora Ek
+
+> Professional portfolio of Luis Enrique Góngora Ek, a Full Stack Developer focused on web, mobile, backend architecture, APIs, integrations, automation, performance, scalability, and maintainability.
+
+## Canonical portfolio pages
+
+- Spanish: https://legongoraek.github.io/
+- English: https://legongoraek.github.io/en.html
+
+## Core profile
+
+Luis Enrique Góngora Ek builds scalable web and mobile systems. The portfolio highlights backend development with Django and REST APIs, frontend development with React and Vue, mobile development with React Native, database work with PostgreSQL and MySQL, integrations with external APIs, and business-process automation.
+
+## Main technologies
+
+- JavaScript
+- React
+- React Native
+- Vue.js
+- Electron
+- Django
+- Django REST Framework
+- Node.js
+- PostgreSQL
+- MySQL
+- WordPress
+- WooCommerce
+- Linux / Ubuntu automation and middleware
+
+## Selected projects
+
+- Fidelyt: loyalty platform with web, backend, mobile, testing, and intranet components.
+- Fidelyt Testing Playground: E2E and business-flow validation environment using Playwright.
+- KYB Customs Platform: B2B KYB and customs-compliance workflow platform.
+- Query Converter AI: tool for converting, correcting, optimizing, and explaining multiple query formats.
+- Dashboard Garmin Connect: activity and health metrics dashboard.
+- Dashboard Crypto - Dinametra: cryptocurrency data dashboard using CoinGecko.
+- Dashboard SpaceX - Amerisa Logistics: logistics-oriented dashboard integrating external API data.
+- MediCar: healthcare-focused web platform.
+- Super List: web and mobile inventory-management platform.
+- Horizonte Inmobiliario: real-estate website with EasyBroker integration.
+- Portfolio Assistant: assistant for presenting and organizing portfolio information.
+
+## Public identity
+
+- GitHub: https://github.com/legongoraek
+- LinkedIn: https://www.linkedin.com/in/luisenriquegongoraek
+
+## Discovery files
+
+- Sitemap: https://legongoraek.github.io/sitemap.xml
+- Robots: https://legongoraek.github.io/robots.txt
+
+## Source of truth
+
+For current portfolio information, prefer the canonical Spanish and English pages above. Project descriptions and technologies should not be inferred beyond information published on those pages.
