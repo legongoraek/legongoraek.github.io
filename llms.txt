@@ -39,7 +39,11 @@ Luis Enrique Góngora Ek builds scalable web and mobile systems. The portfolio h
 - MediCar: healthcare-focused web platform.
 - Super List: web and mobile inventory-management platform.
 - Horizonte Inmobiliario: real-estate website with EasyBroker integration.
-- Portfolio Assistant: assistant for presenting and organizing portfolio information.
+- Renta Lo Que Quieras: P2P rental marketplace with catalog, bookings, and management dashboards.
+- ProBike: corporate website for a bicycle store.
+- Portfolio Assistant: shared serverless conversational assistant that answers questions about experience, projects, and skills, with configurable LLM provider.
+- RIS PACS AI: modular clinical platform with longitudinal EHR, RIS/PACS radiology module, and FHIR interoperability.
+- Connect to Analytics: tool for querying industrial monitoring data, historical measurements, and FFT/TWF signals.
 
 ## Public identity
 

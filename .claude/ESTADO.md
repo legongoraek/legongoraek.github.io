@@ -1,25 +1,30 @@
 # Estado del proyecto - legongoraek.github.io
-_Ultima actualizacion: 2026-09-14 00:00_
+_Ultima actualizacion: 2026-10-11_
 
 ## Hecho
-- Sincronizado el contenido de las tarjetas "Renta Lo Que Quieras" y "Portfolio Assistant" con la info real mostrada en https://portafolio-astro-smoky.vercel.app/ (screenshots del usuario), en ES y EN.
-  - [index.html:481-519](index.html:481) - tarjeta "Renta Lo Que Quieras": descripcion de marketplace P2P + stack (Next.js, TypeScript, Django, Django REST Framework, PostgreSQL, Supabase) + bullets de impacto (catalogo con busqueda/filtros, autenticacion y rutas privadas, flujo de reservas y panel de gestion).
-  - [index.html:501-520](index.html:501) - tarjeta "Portfolio Assistant": descripcion de asistente conversacional serverless + stack (TypeScript, Vercel Functions, Anthropic Claude, OpenAI, Gemini) + bullets (backend TS/Vercel Functions, API reutilizable, seleccion de proveedor LLM por config, rate limiting y CORS).
-  - Mismos cambios espejo en [en.html:482-521](en.html:482) (version en ingles).
-- Se mantuvo la estructura de tarjeta existente del sitio (h3 + p + ul + project-links) porque este sitio (vanilla HTML/CSS) no tiene componente de badges de tecnologia como el que se ve en las screenshots del sitio Astro; se opto por incorporar el stack tecnico como bullets adicionales en la lista en vez de agregar un componente visual nuevo.
-- No se modificaron los enlaces de las tarjetas (siguen apuntando a https://renta-lo-que-quieras.vercel.app/ y https://portafolio-astro-smoky.vercel.app/ respectivamente) porque no fue senalado como parte del error.
+- Sesion anterior (commit `a86aba8`, pusheado): tarjetas "Renta Lo Que Quieras" y "Portfolio Assistant" sincronizadas con el sitio Astro (https://portafolio-astro-smoky.vercel.app/).
+- 2026-10-11: sincronizacion de proyectos y timeline con el sitio Astro y con el CV final del usuario (`Downloads\CV\Luis_Enrique_Gongora_Ek_CV.pdf` v2026.09.29.2 y `Luis_Enrique_Gongora_CV_Full_Stack_Con_Foto.pdf`).
+  - Proyecto "RIS PACS AI" (https://medular-ai.vercel.app/): la tarjeta ES ya venia del remoto (commit 7ce1017, del usuario); se agrego la tarjeta EN con ese mismo nombre. Se descarto una tarjeta "Medular AI" duplicada.
+  - Proyecto nuevo "Connect to Analytics" en ES/EN (del CV; sitio https://connect-to-analytics-site.vercel.app y repo GitHub). Total 18 tarjetas por idioma.
+  - Timeline reescrito en ES/EN (index.html:278, en.html:614): Camtom (Software Engineer, jul 2026 - actualidad, nuevo), Fidelyt freelance, Erbessd y Web/Integraciones. Responsabilidades tomadas del CV Full Stack; impacto tomado de Astro. Camtom va sin bloque de impacto porque ninguna fuente lo tiene.
+  - Web/Integraciones cambio de "Ene 2022 - Actualidad" a "2021 - Diciembre 2025" (asi lo dicen los dos CVs).
+  - Se conservan ActiveCampaign, GestorVet y EasyBroker (el CV Full Stack los mantiene).
+  - en.html: se corrigio HTML roto (faltaba cerrar `.project-cards` y habia `<h2>Experience</h2>` + `.experience-cards` duplicados).
+  - llms.txt: se agregaron Renta Lo Que Quieras, ProBike, RIS PACS AI y Connect to Analytics, y se corrigio la descripcion de Portfolio Assistant.
+  - Verificado: balance de div por seccion (projects 37/37, experiencia 8/8 en ambos archivos), render en navegador local (python http.server) de las tarjetas nuevas y el timeline en ES; EN validado parseando el DOM (18 tarjetas, 4 puestos, un solo h2).
 
 ## En curso
-- Nada a medias. El cambio de contenido quedo aplicado en ambos archivos (index.html y en.html) en el mismo turno.
+- Nada a medias. Commit y push hechos (rebase sobre origin/main, conflicto del timeline resuelto con la version nueva).
 
 ## Pendiente
-- Verificar visualmente en navegador (abrir index.html y en.html) que las tarjetas rendericen bien con las listas mas largas (5 bullets en Renta Lo Que Quieras, 4 en Portfolio Assistant) y que no rompan el layout en mobile.
-- Confirmar con el usuario si el link de la tarjeta "Portfolio Assistant" deberia apuntar al repo/deploy propio del asistente (https://portfolio-assistant-six.vercel.app, ver [js/chatbot.js:6](js/chatbot.js:6)) en vez de al sitio Astro, o si el comportamiento actual (enlazar al sitio donde se prueba) es intencional.
-- No se ha hecho commit de estos cambios (git status limpio al inicio de la sesion, cambios actuales sin commitear). Preguntar al usuario si quiere que se commitee.
+- Decidir si el timeline incluye la experiencia previa del CV: Field Engineer en Corporativo Marcha (dic 2018 - ene 2022), Practicas (jun-dic 2018) y Servicio social ISSSTE (ene-jul 2018). No se agrego porque el portafolio es de desarrollo.
+- No se ha verificado el layout en mobile.
+- Link de la tarjeta "Portfolio Assistant": sigue apuntando al sitio Astro; confirmar si deberia ir a https://portfolio-assistant-six.vercel.app (el widget compartido ya se carga desde ese dominio, ver la etiqueta script de portfolio-assistant-six al final de index.html y en.html).
 
 ## Decisiones y contexto
-- El usuario aporto dos screenshots de portafolio-astro-smoky.vercel.app (version Astro del portafolio) mostrando tarjetas de proyecto con badges de categoria (Full Stack / AI-Backend), stack tecnico y checklist de "Impacto". Ese contenido no coincidia con lo que mostraba este repo (legongoraek.github.io, sitio HTML plano), que tenia descripciones genericas y desactualizadas para esos dos proyectos.
-- Se decidio traducir el CONTENIDO (texto) al formato de tarjeta que ya usa este sitio, no clonar el componente visual de badges/checklist del sitio Astro, porque el pedido explicito fue "usar esta misma informacion" y "sincronizar" datos, no rediseñar el UI de las tarjetas. Si el usuario pide tambien igualar el diseno visual, se necesitaria un paso de diseno (frontend-design) aparte.
+- Fuente para puestos, fechas y responsabilidades: el CV del usuario. Lo que pertenezca al repo D:\Proyectos\portfolio (sitio Astro) no se anota ni se trae aqui (indicacion del usuario, 2026-10-11).
+- Para el timeline se usa la variante Full Stack del CV, no la de ingenieria, porque este portafolio es de desarrollo.
+- Se respeta el formato de tarjeta existente (h3 + p + ul + project-links); no se clonaron los badges de Astro.
 
 ## Siguiente paso concreto
-- Preguntar al usuario si quiere: (a) verificacion visual en navegador de los cambios, (b) ajustar el link de Portfolio Assistant, y/o (c) hacer commit de los cambios en index.html y en.html.
+- Preguntar si agrega Corporativo Marcha al timeline y revisar el layout en mobile.
