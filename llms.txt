@@ -44,6 +44,16 @@ Luis Enrique Góngora Ek builds scalable web and mobile systems. The portfolio h
 - Portfolio Assistant: shared serverless conversational assistant that answers questions about experience, projects, and skills, with configurable LLM provider.
 - RIS PACS AI: modular clinical platform with longitudinal EHR, RIS/PACS radiology module, and FHIR interoperability.
 - Connect to Analytics: tool for querying industrial monitoring data, historical measurements, and FFT/TWF signals.
+- WhatsBot: provider-agnostic WhatsApp platform with a multi-line inbox, automations, AI agents, and human support handoff. https://whats-bot-sepia.vercel.app/
+- Moments: digital invitations for weddings, quinceañeras, and events, with RSVP and guest management. https://moments-bay-omega.vercel.app/
+- LicitaBot: monitoring and sector classification of public procurement notices from ComprasMX; see the repository for current information and status. https://github.com/legongoraek/licitabot
+- MapUniversity: university benefits map with location and category search, plus administration tools. https://mapuniversity.vercel.app/ | https://github.com/legongoraek/mapuniversity
+
+## Direct answers
+
+- What does Luis build? Web and mobile products, APIs, integrations, and business-process automations.
+- Which technologies does he use? His projects include Django, React, React Native, Vue.js, Node.js, PostgreSQL, and the technologies listed on each project.
+- Where can I see projects or contact him? The official portfolio pages link to available demos, repositories, and professional contact options.
 
 ## Public identity
 
