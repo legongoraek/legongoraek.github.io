@@ -1,6 +1,6 @@
 # Portafolio Luis Enrique Góngora Ek
 
-Portafolio construido con Astro, Tailwind CSS y deployado en Vercel.
+Sitio estático construido con HTML, CSS y JavaScript; el contenido parte de `index.html`.
 
 ## Características
 
