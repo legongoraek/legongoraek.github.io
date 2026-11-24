@@ -5,4 +5,5 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://legongoraek.github.io/sitemap.xml
+# Sitio principal: https://legongoraek.me/
+Sitemap: https://legongoraek.me/sitemap.xml

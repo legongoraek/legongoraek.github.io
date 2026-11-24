@@ -4,8 +4,8 @@
 
 ## Canonical portfolio pages
 
-- Spanish: https://legongoraek.github.io/
-- English: https://legongoraek.github.io/en.html
+- Spanish: https://legongoraek.me/
+- English: https://legongoraek.me/en/
 
 ## Core profile
 
@@ -63,8 +63,8 @@ Luis Enrique Góngora Ek builds scalable web and mobile systems. The portfolio h
 
 ## Discovery files
 
-- Sitemap: https://legongoraek.github.io/sitemap.xml
-- Robots: https://legongoraek.github.io/robots.txt
+- Sitemap: https://legongoraek.me/sitemap.xml
+- Robots: https://legongoraek.me/robots.txt
 
 ## Source of truth
 
